@@ -1,4 +1,4 @@
-/*
+a/*
 =====================================================================
 *   Ceevee v1.0 Layout Stylesheet
 *   url: styleshout.com
@@ -58,7 +58,6 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #10062e;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -197,7 +196,7 @@ ul#nav li.current a { color: #F06000; }
 
 
 #about {
-   background: #2B2B2B;
+   background: #10062e;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
