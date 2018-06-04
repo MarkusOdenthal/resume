@@ -12,7 +12,6 @@ a/*
    d. Resume Section
    e. Portfolio Section
    f. Call To Action Section
-   g. Testimonials Section
    h. Contact Section
    i. Footer
 
@@ -301,14 +300,14 @@ ul#nav li.current a { color: #F06000; }
 	text-align: left;
 }
 .bars .skills {
-  	margin-top: 36px;
+  	margin-top: 26px;
    list-style: none;
 }
 .bars li {
    position: relative;
-  	margin-bottom: 60px;
+  	margin-bottom: 50px;
   	background: #ccc;
-  	height: 42px;
+  	height: 32px;
   	border-radius: 3px;
 }
 .bars li em {
@@ -329,90 +328,207 @@ ul#nav li.current a { color: #F06000; }
    padding-right: 24px;
   	background: #313131;
    display: inline-block;
-  	height: 42px;
+  	height: 32px;
    line-height: 42px;
    border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
+.python {
+  	width: 70%;
+    -moz-animation: python 2s ease;
+    -webkit-animation: python 2s ease;
+}
+.pandas {
+  	width: 70%;
+  	-moz-animation: pandas 2s ease;
+  	-webkit-animation: pandas 2s ease;
+}
+.numpy {
+  	width: 70%;
+  	-moz-animation: numpy 2s ease;
+  	-webkit-animation: numpy 2s ease;
+}
+.scipy {
+    width: 70%;
+    -moz-animation: scipy 2s ease;
+    -webkit-animation: scipy 2s ease;
+}
+.dask {
+    width: 50%;
+    -moz-animation: dask 2s ease;
+    -webkit-animation: dask 2s ease;
+}
+.matplotlib {
+  	width: 50%;
+  	-moz-animation: matplotlib 2s ease;
+  	-webkit-animation: matplotlib 2s ease;
+}
+.tensorflow {
   	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+  	-moz-animation: tensorflow 2s ease;
+  	-webkit-animation: tensorflow 2s ease;
 }
-.illustrator {
-  	width: 55%;
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
-}
-.wordpress {
+.scikit-learn {
   	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+  	-moz-animation: scikit-learn 2s ease;
+  	-webkit-animation: scikit-learn 2s ease;
 }
-.css {
-  	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
+.html-css {
+    width: 70%;
+    -moz-animation: html-css 2s ease;
+    -webkit-animation: html-css 2s ease;
 }
-.html5 {
-  	width: 80%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
+.java {
+    width: 10%;
+    -moz-animation: java 2s ease;
+    -webkit-animation: java 2s ease;
 }
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+.r_language {
+    width: 10%;
+    -moz-animation: r_language 2s ease;
+    -webkit-animation: r_language 2s ease;
+}
+.keras {
+    width: 30%;
+    -moz-animation: keras 2s ease;
+    -webkit-animation: keras 2s ease;
+}
+.seaborn {
+    width: 70%;
+    -moz-animation: seaborn 2s ease;
+    -webkit-animation: seaborn 2s ease;
+}
+.tableau {
+    width: 5%;
+    -moz-animation: tableau 2s ease;
+    -webkit-animation: tableau 2s ease;
+}
+.plotly {
+    width: 40%;
+    -moz-animation: plotly 2s ease;
+    -webkit-animation: plotly 2s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes python {
+  0%   { width: 0;  }
+  100% { width: 70%;  }
+}
+@-moz-keyframes pandas {
+  0%   { width: 0;  }
+  100% { width: 70%;  }
+}
+@-moz-keyframes numpy {
+  0%   { width: 0;  }
+  100% { width: 70%;  }
+}
+@-moz-keyframes scipy {
+    0%   { width: 0;  }
+    100% { width: 70%;  }
+}
+@-moz-keyframes dask {
+    0%   { width: 0;  }
+    100% { width: 50%;  }
+}
+@-moz-keyframes matplotlib {
+  0%   { width: 0;  }
+  100% { width: 50%;  }
+}
+@-moz-keyframes tensorflow {
+  0%   { width: 0;  }
+  100% { width: 60%;  }
+}
+@-moz-keyframes scikit-learn {
+  0%   { width: 0;  }
+  100% { width: 50%;  }
+}
+@-moz-keyframes html-css {
+    0%   { width: 0px;  }
+    100% { width: 70%;  }
+}
+@-moz-keyframes java {
+    0%   { width: 0px;  }
+    100% { width: 10%;  }
+}
+@-moz-keyframes r_language {
+    0%   { width: 0px;  }
+    100% { width: 10%;  }
+}
+@-moz-keyframes keras {
+    0%   { width: 0px;  }
+    100% { width: 30%;  }
+}
+@-moz-keyframes seaborn {
+    0%   { width: 0px;  }
+    100% { width: 70%;  }
+}
+@-moz-keyframes tableau {
+    0%   { width: 0px;  }
+    100% { width: 5%;  }
+}
+@-moz-keyframes plotly {
+    0%   { width: 0px;  }
+    100% { width: 40%;  }
+}
+
+@-webkit-keyframes python {
+  0%   { width: 0px;  }
+  100% { width: 70%;  }
+}
+@-webkit-keyframes pandas {
+  0%   { width: 0px;  }
+  100% { width: 70%;  }
+}
+@-webkit-keyframes numpy {
+  0%   { width: 0px;  }
+  100% { width: 70%;  }
+}
+@-webkit-keyframes scipy {
+    0%   { width: 0px;  }
+    100% { width: 70%;  }
+}
+@-webkit-keyframes dask {
+    0%   { width: 0px;  }
+    100% { width: 50%;  }
+}
+@-webkit-keyframes matplotlib {
+  0%   { width: 0px;  }
+  100% { width: 50%;  }
+}
+@-webkit-keyframes tensorflow {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
-@-moz-keyframes illustrator {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
-}
-@-moz-keyframes wordpress {
+@-webkit-keyframes scikit-learn {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
-@-moz-keyframes css {
-  0%   { width: 0px;  }
-  100% { width: 90%;  }
+@-webkit-keyframes html-css {
+    0%   { width: 0px;  }
+    100% { width: 70%;  }
 }
-@-moz-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
+@-webkit-keyframes java {
+    0%   { width: 0px;  }
+    100% { width: 10%;  }
 }
-@-moz-keyframes jquery {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
+@-webkit-keyframes r_language {
+    0%   { width: 0px;  }
+    100% { width: 10%;  }
 }
-
-@-webkit-keyframes photoshop {
-  0%   { width: 0px;  }
-  100% { width: 60%;  }
+@-webkit-keyframes keras {
+    0%   { width: 0px;  }
+    100% { width: 30%;  }
 }
-@-webkit-keyframes illustrator {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
+@-webkit-keyframes seaborn {
+    0%   { width: 0px;  }
+    100% { width: 70%;  }
 }
-@-webkit-keyframes wordpress {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
+@-webkit-keyframes tableau {
+    0%   { width: 0px;  }
+    100% { width: 5%;  }
 }
-@-webkit-keyframes css {
-  0%   { width: 0px;  }
-  100% { width: 90%;  }
-}
-@-webkit-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-@-webkit-keyframes jquery {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
+@-webkit-keyframes plotly {
+    0%   { width: 0px;  }
+    100% { width: 40%;  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -641,155 +757,6 @@ call-to-action .button {
 #call-to-action p span {
 	font-family: 'opensans-semibold', sans-serif; 
 	color: #D8D8D8;
-}
-
-/* ------------------------------------------------------------------
-/* g. Testimonials
-/* ------------------------------------------------------------------ */
-
-#testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   background-attachment: fixed;
-
-   position: relative;
-   min-height: 200px;
-   width: 100%;
-   overflow: hidden;
-}
-#testimonials .text-container {
-   padding-top: 96px;
-   padding-bottom: 66px;
-}
-#testimonials h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;   
-   text-transform: uppercase;
-   letter-spacing: 3px;
-   color: #fff;
-}
-#testimonials h1 span { display: none; }
-#testimonials .header-col { padding-top: 9px; }
-#testimonials .header-col h1:before {
-   font-family: 'FontAwesome';
-   content: "\f10d";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #fff;
-}
-
-/*	Blockquotes */
-#testimonials blockquote {
-   margin: 0 0px 30px 0px;
-   padding-left: 0;
-   position: relative;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-}
-#testimonials blockquote:before { content: none; }
-#testimonials blockquote p {
-   font-family: 'librebaskerville-italic', serif;
-   padding: 0;
-   font-size: 24px;
-   line-height: 48px;
-   color: #fff
-}
-#testimonials blockquote cite {
-   display: block;
-   font-size: 12px;
-   font-style: normal;
-   line-height: 18px;
-   color: #fff;
-}
-#testimonials blockquote cite:before { content: "\2014 \0020"; }
-#testimonials blockquote cite a,
-#testimonials blockquote cite a:visited { color: #8B9798; border: none }
-
-/* Flex Slider
-/* ------------------------------------------------------------------ */
-
-/* Reset */
-.flexslider a:active,
-.flexslider a:focus  { outline: none; }
-.slides,
-.flex-control-nav,
-.flex-direction-nav { margin: 0; padding: 0; list-style: none; }
-.slides li { margin: 0; padding: 0;}
-
-/* Necessary Styles */
-.flexslider {
-   position: relative;
-   zoom: 1;
-   margin: 0;
-   padding: 0;
-}
-.flexslider .slides { zoom: 1; }
-.flexslider .slides > li { position: relative; }
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
-/* Suggested container for slide animation setups. Can replace this with your own */
-.flex-container { zoom: 1; position: relative; }
-
-/* Clearfix for .slides */
-.slides:before,
-.slides:after {
-   content: " ";
-   display: table;
-}
-.slides:after {
-   clear: both;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-.no-js .slides > li:first-child { display: block; }
-
-/* Slider Styles */
-.slides { zoom: 1; }
-.slides > li {
-   /*margin-right: 5px; */
-   overflow: hidden;
-}
-
-/* Control Nav */
-.flex-control-nav {
-    width: 100%;
-    position: absolute;
-    bottom: -20px;
-    text-align: left;
-}
-.flex-control-nav li {
-    margin: 0 6px;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-}
-.flex-control-paging li a {
-    width: 12px;
-    height: 12px;
-    display: block;
-    background: #ddd;
-    background: rgba(255, 255, 255, .3);
-    cursor: pointer;
-    text-indent: -9999px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 3px rgba(255, 255, 255, .3);
-}
-.flex-control-paging li a:hover {
-    background: #CCC;
-    background: rgba(255, 255, 255, .7);
-}
-.flex-control-paging li a.flex-active {
-    background: #fff;
-    background: rgba(255, 255, 255, .9);
-    cursor: default;
 }
 
 /* ------------------------------------------------------------------ */
