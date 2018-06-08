@@ -10,15 +10,15 @@
 
 ;(function(window, document) {
   "use strict";
-  var pluginName = 'particleground';
+  let pluginName = 'particleground';
 
   // http://youmightnotneedjquery.com/#deep_extend
   function extend(out) {
     out = out || {};
-    for (var i = 1; i < arguments.length; i++) {
-      var obj = arguments[i];
+    for (let i = 1; i < arguments.length; i++) {
+      let obj = arguments[i];
       if (!obj) continue;
-      for (var key in obj) {
+      for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
           if (typeof obj[key] === 'object')
             deepExtend(out[key], obj[key]);
@@ -28,27 +28,27 @@
       }
     }
     return out;
-  };
+  }
 
-  var $ = window.jQuery;
+  let $ = window.jQuery;
 
   function Plugin(element, options) {
-    var canvasSupport = !!document.createElement('canvas').getContext;
-    var canvas;
-    var ctx;
-    var particles = [];
-    var raf;
-    var mouseX = 0;
-    var mouseY = 0;
-    var winW;
-    var winH;
-    var desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
-    var orientationSupport = !!window.DeviceOrientationEvent;
-    var tiltX = 0;
-    var pointerX;
-    var pointerY;
-    var tiltY = 0;
-    var paused = false;
+    let canvasSupport = !!document.createElement('canvas').getContext;
+    let canvas;
+    let ctx;
+    let particles = [];
+    let raf;
+    let mouseX = 0;
+    let mouseY = 0;
+    let winW;
+    let winH;
+    let desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
+    let orientationSupport = !!window.DeviceOrientationEvent;
+    let tiltX = 0;
+    let pointerX;
+    let pointerY;
+    let tiltY = 0;
+    let paused = false;
 
     options = extend({}, window[pluginName].defaults, options);
 
@@ -67,12 +67,12 @@
       styleCanvas();
 
       // Create particles
-      var numParticles = Math.round((canvas.width * canvas.height) / options.density);
-      for (var i = 0; i < numParticles; i++) {
-        var p = new Particle();
+      let numParticles = Math.round((canvas.width * canvas.height) / options.density);
+      for (let i = 0; i < numParticles; i++) {
+        let p = new Particle();
         p.setStackPos(i);
         particles.push(p);
-      };
+      }
 
       window.addEventListener('resize', function() {
         resizeHandler();
@@ -119,13 +119,13 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update particle positions
-      for (var i = 0; i < particles.length; i++) {
+      for (let i = 0; i < particles.length; i++) {
         particles[i].updatePosition();
-      };
+      }
       // Draw particles
-      for (var i = 0; i < particles.length; i++) {
+      for (let i = 0; i < particles.length; i++) {
         particles[i].draw();
-      };
+      }
 
       // Call this function next time screen is redrawn
       if (!paused) {
@@ -140,21 +140,21 @@
       // Resize the canvas
       styleCanvas();
 
-      var elWidth = element.offsetWidth;
-      var elHeight = element.offsetHeight;
+      let elWidth = element.offsetWidth;
+      let elHeight = element.offsetHeight;
 
       // Remove particles that are outside the canvas
-      for (var i = particles.length - 1; i >= 0; i--) {
+      for (let i = particles.length - 1; i >= 0; i--) {
         if (particles[i].position.x > elWidth || particles[i].position.y > elHeight) {
           particles.splice(i, 1);
         }
-      };
+      }
 
       // Adjust particle density
-      var numParticles = Math.round((canvas.width * canvas.height) / options.density);
+      let numParticles = Math.round((canvas.width * canvas.height) / options.density);
       if (numParticles > particles.length) {
         while (numParticles > particles.length) {
-          var p = new Particle();
+          let p = new Particle();
           particles.push(p);
         }
       } else if (numParticles < particles.length) {
@@ -162,9 +162,10 @@
       }
 
       // Re-index particles
-      for (i = particles.length - 1; i >= 0; i--) {
+        let i;
+        for (i = particles.length - 1; i >= 0; i--) {
         particles[i].setStackPos(i);
-      };
+      }
     }
 
     /**
@@ -187,7 +188,6 @@
      */
     function Particle() {
       this.stackPos;
-      this.active = true;
       this.layer = Math.ceil(Math.random() * 3);
       this.parallaxOffsetX = 0;
       this.parallaxOffsetY = 0;
@@ -237,13 +237,13 @@
       // Draw lines
       ctx.beginPath();
       // Iterate over all particles which are higher in the stack than this one
-      for (var i = particles.length - 1; i > this.stackPos; i--) {
-        var p2 = particles[i];
+      for (let i = particles.length - 1; i > this.stackPos; i--) {
+        let p2 = particles[i];
 
         // Pythagorus theorum to get distance between two points
-        var a = this.position.x - p2.position.x
-        var b = this.position.y - p2.position.y
-        var dist = Math.sqrt((a * a) + (b * b)).toFixed(2);
+        let a = this.position.x - p2.position.x
+        let b = this.position.y - p2.position.y
+        let dist = Math.sqrt((a * a) + (b * b)).toFixed(2);
 
         // If the two particles are in proximity, join them
         if (dist < options.proximity) {
@@ -266,10 +266,10 @@
       if (options.parallax) {
         if (orientationSupport && !desktop) {
           // Map tiltX range [-30,30] to range [0,winW]
-          var ratioX = (winW - 0) / (30 - -30);
+          let ratioX = (winW - 0) / (30 - -30);
           pointerX = (tiltX - -30) * ratioX + 0;
           // Map tiltY range [-30,30] to range [0,winH]
-          var ratioY = (winH - 0) / (30 - -30);
+          let ratioY = (winH - 0) / (30 - -30);
           pointerY = (tiltY - -30) * ratioY + 0;
         } else {
           pointerX = mouseX;
@@ -282,8 +282,8 @@
         this.parallaxOffsetY += (this.parallaxTargY - this.parallaxOffsetY) / 10; // Easing equation
       }
 
-      var elWidth = element.offsetWidth;
-      var elHeight = element.offsetHeight;
+      let elWidth = element.offsetWidth;
+      let elHeight = element.offsetHeight;
 
       switch (options.directionX) {
         case 'left':
@@ -396,9 +396,9 @@
   if ($) {
     $.fn[pluginName] = function(options) {
       if (typeof arguments[0] === 'string') {
-        var methodName = arguments[0];
-        var args = Array.prototype.slice.call(arguments, 1);
-        var returnVal;
+        let methodName = arguments[0];
+        let args = Array.prototype.slice.call(arguments, 1);
+        let returnVal;
         this.each(function() {
           if ($.data(this, 'plugin_' + pluginName) && typeof $.data(this, 'plugin_' + pluginName)[methodName] === 'function') {
             returnVal = $.data(this, 'plugin_' + pluginName)[methodName].apply(this, args);
@@ -428,9 +428,9 @@
  * @license: MIT license
  */
 (function() {
-    var lastTime = 0;
-    var vendors = ['ms', 'moz', 'webkit', 'o'];
-    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    let lastTime = 0;
+    let vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(let x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
       window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
       window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
                                  || window[vendors[x]+'CancelRequestAnimationFrame'];
@@ -438,9 +438,9 @@
 
     if (!window.requestAnimationFrame)
       window.requestAnimationFrame = function(callback, element) {
-        var currTime = new Date().getTime();
-        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-        var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+        let currTime = new Date().getTime();
+        let timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        let id = window.setTimeout(function() { callback(currTime + timeToCall); },
           timeToCall);
         lastTime = currTime + timeToCall;
         return id;
